@@ -236,7 +236,9 @@ Canvas Reference Implementation은 **Helm chart 묶음**으로 제공되며, 공
 
 - **ODA CRDs**: `components` / `exposedapis` / `identityconfigs` / `dependentapis` / `publishednotifications` 등
 - **메인 컨트롤러**: `oda-controller` Deployment (Component·API·Identity·Dependency Operator가 함께 탑재)
-- **유효성 검증**: `compcrdwebhook` (Component CR을 API Server에서 검증)
+- **버전 변환**: `compcrdwebhook` (Component CR의 버전 간 변환 웹훅)
+   - Component CRD는 v1/v1beta4/v1beta3/v1beta2 4개 버전을 동시 서빙
+   - 저장 버전(v1)과 다른 버전으로 요청이 오면 이 웹훅이 변환 처리
 - **IAM 스택**: `canvas-keycloak` + `canvas-postgresql` StatefulSet, `keycloak-config-cli` Job (Realm 초기화)
 - **설치 후 초기화**: `job-hook-postinstall`
 - **게이트웨이 Operator** (values에서 택일): `api-operator-istio`(기본) / `apisix-gateway-install` / `kong-gateway-install`
