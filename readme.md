@@ -366,7 +366,7 @@ kubectl get crd components.oda.tmforum.org \
 
 출처: TM Forum GitHub `tmforum-oda/oda-canvas`, `Canvas-design.md` 및 Operator 문서.
 
-### 그림 3. Canvas 내부 아키텍처 (Kubernetes + CRD + Operators)
+### 그림 4. Canvas 내부 아키텍처 (Kubernetes + CRD + Operators)
 
 ![ODA Canvas 내부 아키텍처](images/04_canvas_architecture.png)
 
@@ -390,7 +390,7 @@ kubectl get crd components.oda.tmforum.org \
 
 > 핵심 메시지: **컴포넌트는 "무엇이 필요한지"만 선언하고, Canvas가 "어떻게 제공할지"를 책임집니다.**
 
-### 그림 3. 컴포넌트 온보딩 라이프사이클
+### 그림 5. 컴포넌트 온보딩 라이프사이클
 
 ![컴포넌트 온보딩 라이프사이클](images/05_component_lifecycle.png)
 
@@ -413,7 +413,7 @@ kubectl get crd components.oda.tmforum.org \
 
 ### 그림 4. 하이퍼스케일러별 Canvas 기술 매핑
 
-![하이퍼스케일러별 Canvas 기술 매핑](images/04_hyperscaler_mapping.png)
+![하이퍼스케일러별 Canvas 기술 매핑](images/06_hyperscaler_mapping.png)
 
 > 주: 공식 발표로 확인된 대응은 **Google의 Apigee / ASM / GMP / IAM**과 **Microsoft의 Azure 오픈소스 blueprint** 입니다. AWS 구성요소는 일반적인 AWS 서비스 매핑 예시이며, AWS가 공식 Innovation Hub 멤버는 아닙니다.
 
